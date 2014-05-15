@@ -12,6 +12,9 @@ This is a widget for the [Appcelerator](http://www.appcelerator.com) [Alloy](htt
 * Works on Android, iOS
 * Compatibile with other fonts and icon sets.
 
+## Working Example
+* [Download the Working Example](https://github.com/MattMcFarland/TitaniumAlloy-FontAwesome-Example) to see it in action - but its so easy to use you probably won't have to.
+
 ## Quick Start
 * [Download the latest version](https://github.com/mattmcfarland/com.mattmcfarland.fontawesome) of the widget as a ZIP file.
 * Unzip the folder to your project under `app/widgets/com.mattmcfarland.fontawesome`.
