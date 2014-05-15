@@ -1,13 +1,14 @@
 #Font Awesome Widget
-*OMG! It's the Offical Font Awesome by Dave Gandy for Titanium Alloy!*
+*OMG! It's the Offical Font Awesome 4.1.0 by Dave Gandy for Titanium Alloy!*
 
 ## Overview
-This is a widget for the [Appcelerator](http://www.appcelerator.com) [Alloy](http://projects.appcelerator.com/alloy/docs/Alloy-bootstrap/index.html) MVC framework which provides easy implementation of all icons found at [fontawesome.io](http://fontawesome.io)
+This is a widget for the [Appcelerator](http://www.appcelerator.com) [Alloy](http://projects.appcelerator.com/alloy/docs/Alloy-bootstrap/index.html) MVC framework which provides easy implementation of the Offical Font Awesome 4.1.0 icons found at [fontawesome.io](http://fontawesome.io)
 
 ## Features
 * 100% Free to use and open source to boot
 * Simply drop the widget into your view XML file
-* Similar implementation as HTML 5
+* Add Icons to any Label, View, or Button with a simple xml attribute.
+* Vector Icons from a font file, scale to any size, give it any color.
 * Works on Android, iOS
 * Compatibile with other fonts and icon sets.
 
