@@ -4,7 +4,7 @@ var debugMode = false;
 if (debugMode) Ti.API.debug('widget.js is active');
 function applyIcons() {
     function updateIcons(children) {
-        // Iterate controls
+        // Iterate tags
         if (children) {
             children.forEach(function (tag) {
 	        	counter++;
@@ -14,7 +14,6 @@ function applyIcons() {
 		        	if (debugMode) Ti.API.debug('['+counter+'] ('+tag['id']+')  icon attribute found. value is "'+tag['icon']+'"');
                     //Only handle icons that use 'fa-' prefix					
                     if (tag['icon'].substring(0, 3) === "fa-") {
-                    	tag.hide();
 			        	if (debugMode) Ti.API.debug('['+counter+'] ('+tag['id']+')  fa- prefix found');
                         //Preserve text and title
                         var aText = icon;
@@ -32,20 +31,14 @@ function applyIcons() {
                         }
                         var props = {
                             font: {
-                                fontFamily: "FontAwesome",
+                                fontFamily: 'fontAwesome',
                                 fontSize: fSize,
                             },
                             text: aText,
                             title: aTitle,
                         };
-                        var fa = {
-                        	fontFamily: 'FontAwesome',
-                        	fontSize: fSize
-                        };
                         
                         tag.applyProperties(props);
-                        tag.setFont(fa);
-                        tag.show();
                         if (debugMode) {
 	                        Ti.API.debug(tag.getFont()['fontFamily']);
 	                        for (var p in tag) {

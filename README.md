@@ -1,4 +1,4 @@
-#Font Awesome Widget
+#Font Awesome Widget 1.0.3
 *OMG! It's the Offical Font Awesome 4.1.0 by Dave Gandy for Titanium Alloy!*
 
 ## Overview
@@ -19,11 +19,12 @@ This is a widget for the [Appcelerator](http://www.appcelerator.com) [Alloy](htt
 ## Quick Start
 * [Download the latest version](https://github.com/mattmcfarland/com.mattmcfarland.fontawesome) of the widget as a ZIP file.
 * Unzip the folder to your project under `app/widgets/com.mattmcfarland.fontawesome`.
+* **ANDROID:** Copy `fontAwesome.ttf` from `com.mattmcfarland.fontawesome/assets/fonts` to `app/assets/fonts`
 * Add the widget as a dependency to your `app/config.json` file:
 
 ```javascript
 "dependencies": {
-	"com.mattmcfarland.fontawesome":"4.1.0"
+	"com.mattmcfarland.fontawesome":"1.0.3"
 }
 ```
 
@@ -100,7 +101,7 @@ Font Awesome FONTS are licensed under SIL OFL 1.1
 
 
 
-#### Titanium Allow Widget . 
+#### Titanium Allow Widget 1.0.3 
 
 Created by Matt McFarland and Licensed under GPL
 
