@@ -1,10 +1,1 @@
-".fa": {
-	font: {
-		fontFamily:"FontAwesome"
-	}
-}
-
-".fa-glass":{
-	text:"f000",
-	title:"000"
-}
+//Deprecated
