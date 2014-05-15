@@ -5,11 +5,7 @@ function applyIcons() {
         // Iterate controls
         if (children) {
             children.forEach(function (tag) {
-                for (var property in tag) {
-                    Ti.API.debug(property + ': ' + tag[property]);
-                }
                 if (tag['icon']) {
-                    Ti.API.debug('ICON FOUND FOR ' + tag['id']);
                     var icon = icons[tag['icon']];
                     //Only handle icons that use 'fa-' prefix					
                     if (tag['icon'].substring(0, 3) === "fa-") {
@@ -25,7 +21,6 @@ function applyIcons() {
                                 fSize = tag['font']['fontSize'];
                             }
                         }
-                        Ti.API.debug('font size: ' + fSize);
                         var props = {
                             font: {
                                 fontFamily: 'FontAwesome',
