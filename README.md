@@ -13,6 +13,7 @@ This is a widget for the [Appcelerator](http://www.appcelerator.com) [Alloy](htt
 * Compatibile with other fonts and icon sets.
 
 ## Working Example
+![Imgur](http://i.imgur.com/xuUFdQE.png)
 * [Download the Working Example](https://github.com/MattMcFarland/TitaniumAlloy-FontAwesome-Example) to see it in action - but its so easy to use you probably won't have to.
 
 ## Quick Start
