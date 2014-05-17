@@ -1,5 +1,7 @@
 /**
  * Font Awesome Icon Widget Controller
+ * 
+ * Parses the active xml view for icon properties, then applies the appropriate icon.
  * Created by Matt McFarland.
  */
     
