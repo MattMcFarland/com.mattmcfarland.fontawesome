@@ -36,12 +36,12 @@ function applyIcons() {
                         
                         if (debugMode) Ti.API.debug('['+counter+'] ('+tag['id']+')  fa- prefix found');
                         
-                        // Cache new text, title, font properties.
+                        // Cache new text, title, font properties.  
                         var aText = icon;
                         var aTitle = icon;
                         var fSize = '16dp';
                         
-                        // Preserve existing text and title properties
+                        // Preserve existing text and title properties, if they exist.
                         if (tag['text']) aText += ' ' + tag['text'];
                         if (tag['title']) aTitle += ' ' + tag['title'];
                         
@@ -50,7 +50,7 @@ function applyIcons() {
                         if (debugMode) Ti.API.debug('['+counter+'] aTitle = "'+aTitle+'"');
                         
                         
-                        // Preserve existing font size
+                        // Preserve existing font size, if it is configured.
                         if (tag['font']) {
                             if (tag['font']['fontSize']) {
                                 fSize = tag['font']['fontSize'];
