@@ -1,4 +1,5 @@
 /**
+<<<<<<< HEAD
  * FontAwesome(4.1.0) Icon Widget for Titanium Alloy
  * @version 1.1.0
  * @author Matt McFarland
@@ -36,6 +37,22 @@ if (debugMode) Ti.API.debug('Font Awesome widget.js is active');
  * Find all siblings / children of existing widget
  * apply icons to any item with 'icon' property containing 'fa-' prefix.
  */
+=======
+ * Font Awesome Icon Widget Controller
+ * 
+ * Parses the active xml view for icon properties, then applies the appropriate icon.
+ * Created by Matt McFarland.
+ */
+    
+// icon data array /lib/icons.js
+var icons = require(WPATH('icons'));
+
+//debug options
+var counter = 0;
+var debugMode = false;
+if (debugMode) Ti.API.debug('Font Awesome widget.js is active');
+
+>>>>>>> 07c73715d33cd1390e093ea7209973a4334ac2d1
 function applyIcons() {
     function updateIcons(children) {
         
@@ -47,8 +64,11 @@ function applyIcons() {
                 counter++;
                 if (debugMode) Ti.API.debug('['+counter+'] ('+tag['id']+')  Checking for icon attribute');
                 //.../Debugging stuff
+<<<<<<< HEAD
                 // Add or change Icon if user changes the ['icon'] property.
 
+=======
+>>>>>>> 07c73715d33cd1390e093ea7209973a4334ac2d1
                 
                 // If current tag has an icon property
                 if (tag['icon']) {
@@ -58,10 +78,59 @@ function applyIcons() {
                                         
                     //Only handle icons that use 'fa-' prefix					
                     if (tag['icon'].substring(0, 3) === "fa-") {
+<<<<<<< HEAD
                         
                         if (debugMode) Ti.API.debug('['+counter+'] ('+tag['id']+')  fa- prefix found');
                         
                         addIcon(tag,icon);
+=======
+                        
+                        if (debugMode) Ti.API.debug('['+counter+'] ('+tag['id']+')  fa- prefix found');
+                        
+                        // Cache new text, title, font properties.  
+                        var aText = icon;
+                        var aTitle = icon;
+                        var fSize = '16dp';
+                        
+                        // Preserve existing text and title properties, if they exist.
+                        if (tag['text']) aText += ' ' + tag['text'];
+                        if (tag['title']) aTitle += ' ' + tag['title'];
+                        
+                        // Debugging stuff
+                        if (debugMode) Ti.API.debug('['+counter+'] aText = "'+aText+'"');
+                        if (debugMode) Ti.API.debug('['+counter+'] aTitle = "'+aTitle+'"');
+                        
+                        
+                        // Preserve existing font size, if it is configured.
+                        if (tag['font']) {
+                            if (tag['font']['fontSize']) {
+                                fSize = tag['font']['fontSize'];
+                            }
+                        }
+                        
+                        // Configure new properties
+                        var props = {
+                            font: {
+                                fontFamily: 'fontAwesome',
+                                fontSize: fSize,
+                            },
+                            text: aText,
+                            title: aTitle,
+                        };
+                        
+                        // Apply properties 
+                        tag.applyProperties(props);
+                        
+                        // Debugging stuff
+                        if (debugMode) {
+                            Ti.API.debug(tag.getFont()['fontFamily']);
+                            for (var p in tag) {
+                                Ti.API.debug('['+counter+'] ('+tag['id']+') {'+p+'} value is "'+tag[p]+'"');
+                            }
+                            
+                            
+                        }
+>>>>>>> 07c73715d33cd1390e093ea7209973a4334ac2d1
                     }
                 }
                 // think about the children!
