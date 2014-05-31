@@ -60,7 +60,7 @@ That's it. You simply add your Icons in a very similar way we do it with HTML 5.
 ### Documentation
 
 
-For a more comprehensive overview, [review the docs](http://htmlpreview.github.io//MattMcFarland/com.mattmcfarland.fontawesome/blob/dev/doc/Widget.html)
+For a more comprehensive overview, [review the docs](http://mattmcfarland.github.io/com.mattmcfarland.fontawesome/doc/global.html)
 
 
 ### FAQ 
