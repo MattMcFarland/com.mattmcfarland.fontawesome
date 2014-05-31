@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Com.mattmcfarland.fontawesome : Font Awesome meets Appcelerator Titanium Alloy" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Com.mattmcfarland.fontawesome</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/MattMcFarland/com.mattmcfarland.fontawesome">View on GitHub</a>
+
+          <h1 id="project_title">Com.mattmcfarland.fontawesome</h1>
+          <h2 id="project_tagline">Font Awesome meets Appcelerator Titanium Alloy</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/MattMcFarland/com.mattmcfarland.fontawesome/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/MattMcFarland/com.mattmcfarland.fontawesome/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="font-awesome-widget-103" class="anchor" href="#font-awesome-widget-103"><span class="octicon octicon-link"></span></a>Font Awesome Widget 1.0.3</h1>
+
+<p><em>OMG! It's the Offical Font Awesome 4.1.0 by Dave Gandy for Titanium Alloy!</em></p>
+
+<h2>
+<a name="overview" class="anchor" href="#overview"><span class="octicon octicon-link"></span></a>Overview</h2>
+
+<p>This is a widget for the <a href="http://www.appcelerator.com">Appcelerator</a> <a href="http://projects.appcelerator.com/alloy/docs/Alloy-bootstrap/index.html">Alloy</a> MVC framework which provides easy implementation of the Offical Font Awesome 4.1.0 icons found at <a href="http://fontawesome.io">fontawesome.io</a></p>
+
+<h2>
+<a name="features" class="anchor" href="#features"><span class="octicon octicon-link"></span></a>Features</h2>
+
+<ul>
+<li>100% Free to use and open source to boot</li>
+<li>Simply drop the widget into your view XML file</li>
+<li>Add Icons to any Label, View, or Button with a simple xml attribute.</li>
+<li>Vector Icons from a font file, scale to any size, give it any color.</li>
+<li>Works on Android, iOS</li>
+<li>Compatibile with other fonts and icon sets.</li>
+</ul><h2>
+<a name="working-example" class="anchor" href="#working-example"><span class="octicon octicon-link"></span></a>Working Example</h2>
+
+<p><img src="http://i.imgur.com/xuUFdQE.png" alt="Imgur"></p>
+
+<ul>
+<li>
+<a href="https://github.com/MattMcFarland/TitaniumAlloy-FontAwesome-Example">Download the Working Example</a> to see it in action - but its so easy to use you probably won't have to.</li>
+</ul><h2>
+<a name="quick-start" class="anchor" href="#quick-start"><span class="octicon octicon-link"></span></a>Quick Start</h2>
+
+<ul>
+<li>
+<a href="https://github.com/mattmcfarland/com.mattmcfarland.fontawesome">Download the latest version</a> of the widget as a ZIP file.</li>
+<li>Unzip the folder to your project under <code>app/widgets/com.mattmcfarland.fontawesome</code>.</li>
+<li>
+<strong>ANDROID:</strong> Copy <code>fontAwesome.ttf</code> from <code>com.mattmcfarland.fontawesome/assets/fonts</code> to <code>app/assets/fonts</code>
+</li>
+<li>Add the widget as a dependency to your <code>app/config.json</code> file:</li>
+</ul><div class="highlight highlight-javascript"><pre><span class="s2">"dependencies"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"com.mattmcfarland.fontawesome"</span><span class="o">:</span><span class="s2">"1.0.3"</span>
+<span class="p">}</span>
+</pre></div>
+
+<ul>
+<li>Add the widget as the last item in the view container you want to apply icons styles to, so your <strong>main window or view</strong>, just <em>above</em> the closing <code>Window</code> or <code>View</code> tags.</li>
+</ul><div class="highlight highlight-xml"><pre><span class="nt">&lt;Alloy&gt;</span>
+    <span class="nt">&lt;TabGroup&gt;</span>
+        <span class="nt">&lt;Tab</span> <span class="na">title=</span><span class="s">"Tab 1"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;Window</span> <span class="na">title=</span><span class="s">"Tab 1"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;Label</span> <span class="na">icon =</span> <span class="s">"fa-car"</span> <span class="nt">&gt;</span>I am Window 1<span class="nt">&lt;/Label&gt;</span>
+                <span class="nt">&lt;Widget</span> <span class="na">src=</span><span class="s">"com.mattmcfarland.fontawesome"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;/Window&gt;</span>
+        <span class="nt">&lt;/Tab&gt;</span>
+        <span class="nt">&lt;Tab</span> <span class="na">title=</span><span class="s">"Tab 2"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;Window</span> <span class="na">title=</span><span class="s">"Tab 2"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;View&gt;</span>
+                    <span class="nt">&lt;Label</span> <span class="na">icon =</span> <span class="s">"fa-star"</span><span class="nt">&gt;</span>I am Window 2<span class="nt">&lt;/Label&gt;</span>
+                    <span class="nt">&lt;Widget</span> <span class="na">src=</span><span class="s">"com.mattmcfarland.fontawesome"</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;/View&gt;</span>
+            <span class="nt">&lt;/Window&gt;</span>
+        <span class="nt">&lt;/Tab&gt;</span>
+    <span class="nt">&lt;/TabGroup&gt;</span>
+<span class="nt">&lt;/Alloy&gt;</span>
+</pre></div>
+
+<p>That's it. You simply add your Icons in a very similar way we do it with HTML 5.</p>
+
+<div class="highlight highlight-xml"><pre><span class="nt">&lt;Label</span> <span class="na">icon =</span> <span class="s">"fa-glass"</span><span class="nt">&gt;&lt;/Label&gt;</span>
+</pre></div>
+
+<h3>
+<a name="faq" class="anchor" href="#faq"><span class="octicon octicon-link"></span></a>FAQ</h3>
+
+<p><strong>Q: Where does it place the icon?</strong></p>
+
+<p>A: If you add it to a Label with text, it appears before the text.  If you want to put it after the text, or anywhere else, you can simply just add it as a seperate label like so: <code>&lt;Label icon = "fa-users"/&gt;</code></p>
+
+<p><strong>Q: Where is the reference guide/cheat sheet for these icons?</strong></p>
+
+<p>A: You can find a complete list of all icons and their names at <a href="http://fontawesome.io/icons">fontawesome.io/icons</a> </p>
+
+<p><strong>Q: Are there any compatibility issues?</strong></p>
+
+<p>A: I haven't tested enough to say for sure.  </p>
+
+<p><strong>Q: What if I'm using <code>icon</code> for something else?</strong></p>
+
+<p>A: FontAwesome Widget will only pay attention to the icon property value using the <code>fa-</code> prefix.</p>
+
+<p><strong>Q: What to do if I can't get it to work?</strong></p>
+
+<p>A: Please use the issues tab on the right, this way we can publically fix your issue and hopefully fix it for others who may run into the same problem in the future.</p>
+
+<p><strong>Q: Do I need to put it inside every <code>&lt;View&gt;</code> tag??</strong></p>
+
+<p>A: To be on the safe side you can, but I've managed to get it to work just putting it right before the closing <code>&lt;/Window&gt;</code> Tag.</p>
+
+<p><strong>Q: Who made these Awesome Icons???</strong></p>
+
+<p>A: The Icons themselves were created by Dave Gandy, the Font in which they populate is under the SIL OFL 1.1 License.  It's free for commercial use!</p>
+
+<p><strong>Q: I've seen another FontAwesome on Titanium's Marketplace for $5, is this the same?</strong></p>
+
+<p>A: Not the same at all, the other one is using an older version of Font Awesome, has a few proprietary fonts mixed in, and was made for Titanium, not Alloy. </p>
+
+<h3>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h3>
+
+<h4>
+<a name="font-awesome-410" class="anchor" href="#font-awesome-410"><span class="octicon octicon-link"></span></a>Font Awesome 4.1.0</h4>
+
+<p>Font Awesome 4.1.0 · Created by Dave Gandy</p>
+
+<p>Font Awesome FONTS are licensed under SIL OFL 1.1 </p>
+
+<h4>
+<a name="titanium-allow-widget-103" class="anchor" href="#titanium-allow-widget-103"><span class="octicon octicon-link"></span></a>Titanium Allow Widget 1.0.3</h4>
+
+<p>Created by Matt McFarland and Licensed under GPL</p>
+
+<p>Font Awesome 4.1.0 Widget for Titanium Alloy</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Com.mattmcfarland.fontawesome maintained by <a href="https://github.com/MattMcFarland">MattMcFarland</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
