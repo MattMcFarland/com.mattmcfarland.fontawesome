@@ -12,30 +12,11 @@
 // @private icon data array /lib/icons.js
 var icons = require(WPATH('icons'));
 
-// @private counter
+//debug options
 var counter = 0;
-
-/**
- * debugMode
- * @global {property} debugMode
- * @default false
- * @description Toggle debugMode.
- * If enabled, prints debug output to console if your log level is at debug.
- * @example $.fa.debugMode = true; 
- * 
- */
-exports.debugMode = false;
-var debugMode = exports.debugMode;
+var debugMode = false;
 if (debugMode) Ti.API.debug('Font Awesome widget.js is active');
 
-
-
-
-/**
- * @private applyIcons()
- * Find all siblings / children of existing widget
- * apply icons to any item with 'icon' property containing 'fa-' prefix.
- */
 function applyIcons() {
     function updateIcons(children) {
         
@@ -47,8 +28,6 @@ function applyIcons() {
                 counter++;
                 if (debugMode) Ti.API.debug('['+counter+'] ('+tag['id']+')  Checking for icon attribute');
                 //.../Debugging stuff
-                // Add or change Icon if user changes the ['icon'] property.
-
                 
                 // If current tag has an icon property
                 if (tag['icon']) {
@@ -61,7 +40,49 @@ function applyIcons() {
                         
                         if (debugMode) Ti.API.debug('['+counter+'] ('+tag['id']+')  fa- prefix found');
                         
-                        addIcon(tag,icon);
+                        // Cache new text, title, font properties.  
+                        var aText = icon;
+                        var aTitle = icon;
+                        var fSize = '16dp';
+                        
+                        // Preserve existing text and title properties, if they exist.
+                        if (tag['text']) aText += ' ' + tag['text'];
+                        if (tag['title']) aTitle += ' ' + tag['title'];
+                        
+                        // Debugging stuff
+                        if (debugMode) Ti.API.debug('['+counter+'] aText = "'+aText+'"');
+                        if (debugMode) Ti.API.debug('['+counter+'] aTitle = "'+aTitle+'"');
+                        
+                        
+                        // Preserve existing font size, if it is configured.
+                        if (tag['font']) {
+                            if (tag['font']['fontSize']) {
+                                fSize = tag['font']['fontSize'];
+                            }
+                        }
+                        
+                        // Configure new properties
+                        var props = {
+                            font: {
+                                fontFamily: 'fontAwesome',
+                                fontSize: fSize,
+                            },
+                            text: aText,
+                            title: aTitle,
+                        };
+                        
+                        // Apply properties 
+                        tag.applyProperties(props);
+                        
+                        // Debugging stuff
+                        if (debugMode) {
+                            Ti.API.debug(tag.getFont()['fontFamily']);
+                            for (var p in tag) {
+                                Ti.API.debug('['+counter+'] ('+tag['id']+') {'+p+'} value is "'+tag[p]+'"');
+                            }
+                            
+                            
+                        }
                     }
                 }
                 // think about the children!
