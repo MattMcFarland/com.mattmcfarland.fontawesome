@@ -57,11 +57,10 @@ That's it. You simply add your Icons in a very similar way we do it with HTML 5.
 <Label icon = "fa-glass"></Label>
 ```
 
-### JS Methods:
+### Documentation
 
-**Assuming you have created a widget instance with the id of `fa`**
 
-#### add
+For a more comprehensive overview, [review the docs](docs/Widget.html)
 
 
 ### FAQ 
