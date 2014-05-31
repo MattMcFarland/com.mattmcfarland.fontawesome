@@ -1,4 +1,4 @@
-#Font Awesome Widget 1.0.3
+#Font Awesome Widget 1.1.0
 *OMG! It's the Offical Font Awesome 4.1.0 by Dave Gandy for Titanium Alloy!*
 
 ## Overview
@@ -36,14 +36,14 @@ This is a widget for the [Appcelerator](http://www.appcelerator.com) [Alloy](htt
         <Tab title="Tab 1">
             <Window title="Tab 1">
                 <Label icon = "fa-car" >I am Window 1</Label>
-                <Widget src="com.mattmcfarland.fontawesome"/>
+                <Widget id="fa1" src="com.mattmcfarland.fontawesome"/>
             </Window>
         </Tab>
         <Tab title="Tab 2">
             <Window title="Tab 2">
                 <View>
                     <Label icon = "fa-star">I am Window 2</Label>
-                    <Widget src="com.mattmcfarland.fontawesome"/>
+                    <Widget id="fa2" src="com.mattmcfarland.fontawesome"/>
                 </View>
             </Window>
         </Tab>
@@ -57,6 +57,13 @@ That's it. You simply add your Icons in a very similar way we do it with HTML 5.
 <Label icon = "fa-glass"></Label>
 ```
 
+### JS Methods:
+
+**Assuming you have created a widget instance with the id of `fa`**
+
+#### add
+
+
 ### FAQ 
 
 **Q: Where does it place the icon?**
@@ -69,7 +76,7 @@ A: You can find a complete list of all icons and their names at [fontawesome.io/
 
 **Q: Are there any compatibility issues?**
 
-A: I haven't tested enough to say for sure.  
+A: Android requires putting the icon inside the app's asset folder, and Mobileweb does not allow for text+icon sharing. 
 
 **Q: What if I'm using `icon` for something else?**
 
@@ -81,7 +88,7 @@ A: Please use the issues tab on the right, this way we can publically fix your i
 
 **Q: Do I need to put it inside every `<View>` tag??**
 
-A: To be on the safe side you can, but I've managed to get it to work just putting it right before the closing `</Window>` Tag.
+A: The widget will automatically parse its siblings/children for `icon` properties with `fa-` prefix. For optimum efficiency, you should only apply the widget to these areas. 
 
 **Q: Who made these Awesome Icons???**
 
@@ -90,6 +97,7 @@ A: The Icons themselves were created by Dave Gandy, the Font in which they popul
 **Q: I've seen another FontAwesome on Titanium's Marketplace for $5, is this the same?**
 
 A: Not the same at all, the other one is using an older version of Font Awesome, has a few proprietary fonts mixed in, and was made for Titanium, not Alloy. 
+
 
 ### License
 
@@ -101,11 +109,22 @@ Font Awesome FONTS are licensed under SIL OFL 1.1
 
 
 
-#### Titanium Allow Widget 1.0.3 
+#### Titanium Allow Widget 1.1.0 
 
 Created by Matt McFarland and Licensed under GPL
 
 
+### Changelog
 
+**Version 1.1.0**
+* Added JS methods for adding/removing/refreshing icons.
 
-Font Awesome 4.1.0 Widget for Titanium Alloy
+**Version 1.0.3** 
+* Established symantic versioning, fixed android bugs.
+* Disregard version 4.0.3 (is actually version 1.0) - important!
+
+**Version 1.0.0**
+* Accidentally named version 4.0.3
+* Initial Release
+
+Font Awesome 1.1.0 Widget for Titanium Alloy
