@@ -60,7 +60,7 @@ That's it. You simply add your Icons in a very similar way we do it with HTML 5.
 ### Documentation
 
 
-For a more comprehensive overview, [review the docs](docs/Widget.html)
+For a more comprehensive overview, [review the docs](doc/Widget.html)
 
 
 ### FAQ 
