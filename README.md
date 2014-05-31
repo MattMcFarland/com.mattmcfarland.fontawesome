@@ -65,7 +65,7 @@ For a more comprehensive overview, [review the docs](http://mattmcfarland.github
 
 ### FAQ 
 
-FAQ moved [here](faq.md)
+FAQ moved [here](FAQ.md)
 
 ### License
 
