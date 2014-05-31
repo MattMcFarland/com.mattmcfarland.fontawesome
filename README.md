@@ -24,7 +24,7 @@ This is a widget for the [Appcelerator](http://www.appcelerator.com) [Alloy](htt
 
 ```javascript
 "dependencies": {
-	"com.mattmcfarland.fontawesome":"1.0.3"
+	"com.mattmcfarland.fontawesome":"1.1.0"
 }
 ```
 
