@@ -1,4 +1,5 @@
 /**
+<<<<<<< HEAD
  * @file widget.js 
  * @namespace Widget
  * @author Matthew McFarland
@@ -10,10 +11,18 @@
  * @example <caption>Titanium:</caption>
  * var fa = Alloy.createWidget("com.mattmcfarland.fontawesome");
  * win.add(fa);
+=======
+ * FontAwesome(4.1.0) Icon Widget for Titanium Alloy
+ * @version 1.1.0
+ * @author Matt McFarland
+ * @license GPL
+ * @example <Widget id="fa" src="com.mattmcfarland.fontawesome" />
+>>>>>>> a2da1761c091e012eb8049b38b3b5b1703da03ce
  */
 
 
 
+<<<<<<< HEAD
 // --------------------------------------------
 //
 // Public Properties (AKA "Members") 
@@ -230,6 +239,34 @@ exports.refresh = function(){applyIcons();};
  * @since 1.0.0
  * 
  * Find all siblings / children of existing widget and
+=======
+    
+// @private icon data array /lib/icons.js
+var icons = require(WPATH('icons'));
+
+// @private counter
+var counter = 0;
+
+/**
+ * debugMode
+ * @global {property} debugMode
+ * @default false
+ * @description Toggle debugMode.
+ * If enabled, prints debug output to console if your log level is at debug.
+ * @example $.fa.debugMode = true; 
+ * 
+ */
+exports.debugMode = false;
+var debugMode = exports.debugMode;
+if (debugMode) Ti.API.debug('Font Awesome widget.js is active');
+
+
+
+
+/**
+ * @private applyIcons()
+ * Find all siblings / children of existing widget
+>>>>>>> a2da1761c091e012eb8049b38b3b5b1703da03ce
  * apply icons to any item with 'icon' property containing 'fa-' prefix.
  */
 function applyIcons() {
@@ -248,7 +285,11 @@ function applyIcons() {
                 
                 // If current tag has an icon property
                 if (tag['icon']) {
+<<<<<<< HEAD
                     var iconChar = icons.charMap[tag['icon']];
+=======
+                    var icon = icons[tag['icon']];
+>>>>>>> a2da1761c091e012eb8049b38b3b5b1703da03ce
                     
                     if (debugMode) Ti.API.debug('['+counter+'] ('+tag['id']+')  icon attribute found. value is "'+tag['icon']+'"');
                                         
@@ -257,7 +298,11 @@ function applyIcons() {
                         
                         if (debugMode) Ti.API.debug('['+counter+'] ('+tag['id']+')  fa- prefix found');
                         
+<<<<<<< HEAD
                         addIcon(tag,iconChar);
+=======
+                        addIcon(tag,icon);
+>>>>>>> a2da1761c091e012eb8049b38b3b5b1703da03ce
                     }
                 }
                 // think about the children!
@@ -270,9 +315,16 @@ function applyIcons() {
 }
 
 /**
- * @private RemoveIcon(tag)
+<<<<<<< HEAD
+ * @private 
+ * @since v1.1.0
+ * 
  * Remove an Icon from a view, then remove any special characters (which are hopefully icon!) from text/title
  * @param {Ti.UI.View} tag - view element to remove..
+=======
+ * @private RemoveIcon(tag)
+ * Remove an Icon from a view, then remove any special characters (which are hopefully icon!) from text/title
+>>>>>>> a2da1761c091e012eb8049b38b3b5b1703da03ce
  */
 function removeIcon(tag) {
 	if (tag.icon) tag.icon = '';
@@ -281,6 +333,7 @@ function removeIcon(tag) {
 }
 
 /**
+<<<<<<< HEAD
  * @private 
  * @since v1.1.0
  * 
@@ -288,12 +341,17 @@ function removeIcon(tag) {
  * 
  * @param {String} string - REGEX this.
  * @returns {String} new string without special characters.
+=======
+ * @private Remove Special Characters
+ * Helper: Remove special characters
+>>>>>>> a2da1761c091e012eb8049b38b3b5b1703da03ce
  */
 function removeChars(string) {
 	return string.replace(/[^\w\s]/gi, '');
 }
 
 /**
+<<<<<<< HEAD
  * @private 
  * @since v1.0.0
  * 
@@ -311,6 +369,19 @@ function addIcon(tag,iconChar) {
     
     // Preserve existing text and title properties, if they exist.
     // by appending original text/title to new text/title that only has icon char. 
+=======
+ * @private Add Icon
+ * Adds Icon to tags text/title, set font property and preserve font sizing.
+ */
+function addIcon(tag,icon) {
+	
+    // Cache new text, title, font properties.  
+    var aText = icon;
+    var aTitle = icon;
+    var fSize = '16dp';
+    
+    // Preserve existing text and title properties, if they exist.
+>>>>>>> a2da1761c091e012eb8049b38b3b5b1703da03ce
     if (tag['text']) aText += ' ' + tag['text'];
     if (tag['title']) aTitle += ' ' + tag['title'];
     
@@ -329,7 +400,11 @@ function addIcon(tag,iconChar) {
     // Configure new properties
     var props = {
         font: {
+<<<<<<< HEAD
             fontFamily: icons.fontFamily,
+=======
+            fontFamily: 'fontAwesome',
+>>>>>>> a2da1761c091e012eb8049b38b3b5b1703da03ce
             fontSize: fSize,
         },
         text: aText,
@@ -349,6 +424,7 @@ function addIcon(tag,iconChar) {
 	
 }
 
+<<<<<<< HEAD
 /**
  * @private 
  * @since v1.1.0
@@ -361,11 +437,30 @@ function addIcon(tag,iconChar) {
 function createIcon(el,iconName) {
 	el.icon=iconName;
 	var iconSyl = icons.charMap[el['icon']];
+=======
+
+
+
+
+
+
+/**
+ * Create Icon
+ * @private createIcon
+ * Prepends an Icon to a Ti.UI.View Element.
+ * @param {Ti.UI.View} el - Create and Prepend To Target Element (label, button, view, etc)
+ * @param {String} icon - font-awesome icon string (ie: fa-flag)
+ */
+function createIcon(el,icon) {
+	el.icon=icon;
+	var iconSyl = icons[el['icon']];
+>>>>>>> a2da1761c091e012eb8049b38b3b5b1703da03ce
 	addIcon(el,iconSyl);
 }
 
 
 /**
+<<<<<<< HEAD
  * @private 
  * @since v1.1.0
  * 
@@ -375,10 +470,20 @@ function createIcon(el,iconName) {
  */
 function destroyIcon(el) {
     removeIcon(el);	
+=======
+ * Destroy Icon
+ * @private destroyIcon
+ * Removes .icon property from view and strips from .title or .text property.
+ * @param {Ti.UI.View} el - Remove from Target Element (label, button, view, etc)
+ */
+function destroyIcon(el) {
+	    removeIcon(el);	
+>>>>>>> a2da1761c091e012eb8049b38b3b5b1703da03ce
 }
 
 
 /**
+<<<<<<< HEAD
  * @private 
  * 
  * @param {Ti.UI.View} el - Remove & Replace Icon
@@ -413,3 +518,74 @@ if (typeof instaParse 	=== 'undefined') { instaParse = true; }
 // Start
 if (debugMode) Ti.API.debug('Font Awesome widget.js is active');
 if (instaParse) { applyIcons(); }
+=======
+ * Change Icon
+ * @private changeIcon
+ * @param {Ti.UI.View} el - Remove & Replace Icon
+ * @param {String} icon - New Icon string.
+ */
+function changeIcon(el,icon) {
+	    removeIcon(el);
+    	createIcon(el,icon);
+}
+
+
+
+
+
+/**
+ * Adds an Icon to an existing view element.
+ * 
+ * @param {Ti.UI.View} el - Create and Prepend To Target Element (label, button, view, etc)
+ * @param {String} icon - font-awesome icon (ie: "fa-flag")
+ * @example $.fa.add(MyLabel,"fa-star")
+ */
+exports.add = function(el,icon) {
+	createIcon(el,icon);
+};
+
+
+
+/**
+ * Removes an Icon from an existing view element.
+ * 
+ * @param {Ti.UI.View} el - Removes icon property from target element and from text/title.
+ * @example $.fa.remove(MyButton)
+ * 
+ */
+exports.remove = function(el) {
+	destroyIcon(el);
+};
+
+
+/**
+ * Changes an already existing Icon to another Icon on an existing view element.
+ * 
+ * @param {Ti.UI.View} el - Element with existing icon property (label, button, view, etc)
+ * @param {String} icon - Change existing icon property to (e.g. : "fa-flag")
+ * @example $.fa.change(MyLabel, "fa-flag")  
+ */
+exports.change = function(el,icon) {
+	changeIcon(el,icon);	
+};
+
+
+
+/**
+ * Runs the initial parser again
+ * 
+ * Parse existing viewport for icon property, apply icons.
+ * @example $.fa.refresh();
+ */
+exports.refresh = function(){applyIcons();};
+
+
+
+
+
+
+
+
+// Initalize!!
+applyIcons();
+>>>>>>> a2da1761c091e012eb8049b38b3b5b1703da03ce
