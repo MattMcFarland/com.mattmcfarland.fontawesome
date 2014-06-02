@@ -134,7 +134,7 @@ Created by Dave Gandy
 
 FontAwesome.ttf is licensed under SIL OFL 1.1 
 
-### Titanium Allow Widget 1.1.1 
+### Titanium Alloy Widget 1.2.0 
 
 Created by Matt McFarland and Licensed under GPL
 
