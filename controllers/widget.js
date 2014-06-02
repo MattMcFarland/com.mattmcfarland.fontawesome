@@ -270,7 +270,9 @@ function applyIcons() {
 }
 
 /**
- * @private RemoveIcon(tag)
+ * @private 
+ * @since v1.1.0
+ * 
  * Remove an Icon from a view, then remove any special characters (which are hopefully icon!) from text/title
  * @param {Ti.UI.View} tag - view element to remove..
  */
