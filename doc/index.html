@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Documentation Index</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	
+	<link type="text/css" rel="stylesheet" href="styles/site.flatly.css">
+	
+</head>
+
+<body>
+<div class="container-fluid">
+	<div class="navbar navbar-fixed-top ">
+		<div class="navbar-inner">
+			<a class="brand" href="index.html">Documentation</a>
+			<ul class="nav">
+				
+				<li class="dropdown">
+					<a href="namespaces.list.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b
+						class="caret"></b></a>
+
+					<ul class="dropdown-menu ">
+						
+						<li>
+							<a href="icons.js.html">icons.js</a>
+						</li>
+						
+						<li>
+							<a href="Widget.html">Widget</a>
+						</li>
+						
+
+					</ul>
+				</li>
+				
+			</ul>
+		</div>
+	</div>
+
+	<div class="row-fluid">
+
+		
+		<div class="span8">
+			
+				<div id="main">
+					
+
+
+	
+	<span class="page-title">Index</span>
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+
+
+
+
+    <section>
+        <article><h1>Font Awesome Ti.Widget 1.2.0</h1><p><em>OMG! It's the Offical Font Awesome 4.1.0 by Dave Gandy for Titanium Alloy!</em></p>
+<h2>Overview</h2><p>This is a widget for the <a href="http://www.appcelerator.com">Appcelerator</a> <a href="http://projects.appcelerator.com/alloy/docs/Alloy-bootstrap/index.html">Alloy</a> MVC framework which provides easy implementation of the Offical Font Awesome 4.1.0 icons found at <a href="http://fontawesome.io">fontawesome.io</a></p>
+<h2>Features</h2><ul>
+<li>100% Free to use and open source to boot</li>
+<li>Simply drop the widget into your view XML file</li>
+<li>Add Icons to any Label, View, or Button with a simple xml attribute.</li>
+<li>Vector Icons from a font file, scale to any size, give it any color.</li>
+<li>Works on Android, iOS</li>
+<li>Compatibile with other fonts and icon sets.</li>
+</ul>
+<h2>Working Example</h2><p><img src="http://i.imgur.com/xuUFdQE.png" alt="Imgur"></p>
+<ul>
+<li><a href="https://github.com/MattMcFarland/TitaniumAlloy-FontAwesome-Example">Download the Working Example</a> to see it in action - but its so easy to use you probably won't have to.</li>
+</ul>
+<h2>Quick Start</h2><ul>
+<li><a href="https://github.com/mattmcfarland/com.mattmcfarland.fontawesome">Download the latest version</a> of the widget as a ZIP file.</li>
+<li>Unzip the folder to your project under <code>app/widgets/com.mattmcfarland.fontawesome</code>.</li>
+<li><strong>ANDROID:</strong> Copy <code>fontAwesome.ttf</code> from <code>com.mattmcfarland.fontawesome/assets/fonts</code> to <code>app/assets/fonts</code></li>
+<li>Add the widget as a dependency to your <code>app/config.json</code> file:</li>
+</ul>
+<pre><code class="lang-javascript">&quot;dependencies&quot;: {
+    &quot;com.mattmcfarland.fontawesome&quot;:&quot;1.2.0&quot;
+}
+</code></pre>
+<h3>Alloy</h3><ul>
+<li>Add the widget as the last item in the view container you want to apply icons styles to, so your <strong>main window or view</strong>, just <em>above</em> the closing <code>Window</code> or <code>View</code> tags.</li>
+</ul>
+<pre><code class="lang-xml">&lt;Alloy&gt;
+    &lt;Window title=&quot;Tab 1&quot;&gt;
+        &lt;Label icon = &quot;fa-car&quot; &gt;I am Window 1&lt;/Label&gt;
+        &lt;Widget id=&quot;fa&quot; src=&quot;com.mattmcfarland.fontawesome&quot;/&gt;
+    &lt;/Window&gt;
+&lt;/Alloy&gt;
+</code></pre>
+<p>That's it. You simply add your Icons in a very similar way we do it with HTML 5.</p>
+<pre><code class="lang-xml">&lt;Label icon = &quot;fa-glass&quot;&gt;&lt;/Label&gt;
+</code></pre>
+<h3>Titanium</h3><pre><code class="lang-js">    var fa = Alloy.createWidget(&quot;com.mattmcfarland.fontawesome&quot;);
+    win.add(fa);
+</code></pre>
+<p>Using Titanium API with Javascript to add icons on the fly:</p>
+<pre><code class="lang-js">$.fa.add(MyLabel,'fa-star');
+</code></pre>
+<h2>Customization</h2><p>As of version 1.2.0, customization has been implemented.  You may use a different font-based icon character map with different widgets. For example, you could use <code>glyphicons</code> or different versions of <code>fontawesome</code></p>
+<h3>Enabling debugMode</h3><p>When customizing the Font Awesome Ti.Widget API, it is recommended to enable debugMode:</p>
+<pre><code class="lang-js">    $.fa.debugMode = true;
+</code></pre>
+<h3>Using custom icons</h3><p>To add your very icon character map from a font-file:</p>
+<ol>
+<li><p>Copy your fontfile into your <code>assets/fonts</code> directory.</p>
+</li>
+<li><p>Make sure the name of the font file and the system name of the font file match.  </p>
+<ul>
+<li>For <code>IOS</code> - Titanium SDK looks for the system name of the font file</li>
+<li>For <code>ANDROID</code> and <code>MOBILE WEB</code> - Titanium SDK looks for the file name without the <code>ext</code> (.ttf)</li>
+<li>This is why FontAwesome.ttf is the same as FontAwesome, the system name is FontAwesome, file name is FontAwesome.</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>For more information, checkout the Titanium SDK documentation regarding adding fonts: http://docs.appcelerator.com/titanium/3.0/#!/guide/Custom_Fonts</p>
+</blockquote>
+<ol>
+<li>Follow the same example found in <code>/com.mattmcfarland.fontawesome/lib/icons.js</code> to create the same font array map.</li>
+</ol>
+<blockquote>
+<p>You MUST use the &quot;fa-&quot; prefix.  You could do something like fa-myfont-star if you wish.</p>
+</blockquote>
+<ol>
+<li><p>Place your custom icons.js file in <code>/assets/lib/</code> and use <code>require</code> to assign them to any widget.</p>
+</li>
+<li><p>Apply your custom fonts to a widget instance like so:</p>
+</li>
+</ol>
+<pre><code class="lang-js">    $.fa.icons = require('new_icons');
+</code></pre>
+<h3>Extended Methods</h3><p>Once you add an instance of the widget to a view, you may use the API methods to add/remove/change icons.</p>
+<blockquote>
+<p>For more information please review the docs: http://mattmcfarland.github.io/com.mattmcfarland.fontawesome</p>
+</blockquote>
+<h2>Methodology</h2><blockquote>
+<p>Knowledge is Power...</p>
+</blockquote>
+<p>The widget was designed so at a very basic level it works right out of the box.  Meaning, all you have to do is add a proper <code>icon</code> property to any view and it works.  But not in all cases, so the purpose of this section is to explain how it works so you can have a better understanding and control over the widget and how it operates.</p>
+<p>Once you create a <code>Font Awesome Ti.Widget</code> it immediately parses the view it is added to for other <code>Ti.UI.View</code> objects.  The scope of this query is limited to the widget's siblings and it/their children views (and grand children and so on). </p>
+<blockquote>
+<p>As of version 1.2.0, you can disable the initial parser by adding the property <code>instaParse</code> to <code>false</code> (<code>eg: &lt;Widget instaParse = &quot;false&quot; ...</code>), then use the <code>refresh</code> method to parse when you are ready.</p>
+</blockquote>
+<p>The <code>Font Awesome Ti.Widget</code> then applies icons to every instance of a <code>Ti.UI.View</code> object that has an <code>icon</code> property with a <code>fa-</code> prefix.  Because MobileWeb, Android, and IOS handle View objects (such as Label, Button, Row, etc) differently, you may have to create blank labels just for icons for optimal compatibility.</p>
+<p>Additional methods such as add, remove, change are available for use with a widget instance so you can have additional control. Refer to the documentation for the comments in <code>widget.js</code> for more information.</p>
+<h2>Documentation</h2><p>As of version 1.1.1, Font Awesome Ti.Widget code is heavily documented.
+If you are planning on using additional functionality or customization please review the docs at http://mattmcfarland.github.io/com.mattmcfarland.fontawesome</p>
+<h2>License</h2><h3>Font Awesome 4.1.0</h3><p>Created by Dave Gandy</p>
+<p>FontAwesome.ttf is licensed under SIL OFL 1.1 </p>
+<h3>Titanium Allow Widget 1.1.1</h3><p>Created by Matt McFarland and Licensed under GPL</p>
+<h2>Changelog</h2><p><strong>Version 1.2.0</strong></p>
+<ul>
+<li>Improved Documentation.</li>
+<li>Include docs with widget.</li>
+<li>Add custom icon functionality.</li>
+<li>Add option to disable initial parser.</li>
+<li>Mobileweb is no longer supported, but still works.</li>
+</ul>
+<p><strong>Version 1.1.1</strong></p>
+<ul>
+<li>Fix md documentation </li>
+</ul>
+<p><strong>Version 1.1.0</strong></p>
+<ul>
+<li>Added JS methods for adding/removing/refreshing icons.</li>
+</ul>
+<p><strong>Version 1.0.1-3</strong> </p>
+<ul>
+<li>Established symantic versioning, fixed android bugs.</li>
+<li>Disregard version 4.0.3 (is actually version 1.0) - important!</li>
+</ul>
+<p><strong>Version 1.0.0</strong></p>
+<ul>
+<li>Accidentally named version 4.0.3</li>
+<li>Initial Release</li>
+</ul>
+<h2>FAQ</h2><p><strong>Q: Where does it place the icon?</strong></p>
+<p>A: If you add it to a Label with text, it appears before the text.  If you want to put it after the text, or anywhere else, you can simply just add it as a seperate label like so: <code>&lt;Label icon = &quot;fa-users&quot;/&gt;</code></p>
+<p><strong>Q: Where is the reference guide/cheat sheet for these icons?</strong></p>
+<p>A: You can find a complete list of all icons and their names at <a href="http://fontawesome.io/icons">fontawesome.io/icons</a> </p>
+<p><strong>Q: Are there any compatibility issues?</strong></p>
+<p>A: Android requires putting the icon inside the app's asset folder, and Mobileweb does not allow for text+icon sharing. </p>
+<p><strong>Q: What if I'm using <code>icon</code> for something else?</strong></p>
+<p>A: FontAwesome Widget will only pay attention to the icon property value using the <code>fa-</code> prefix.</p>
+<p><strong>Q: What to do if I can't get it to work?</strong></p>
+<p>A: Please use the issues tab on the right, this way we can publically fix your issue and hopefully fix it for others who may run into the same problem in the future.</p>
+<p><strong>Q: Do I need to put it inside every <code>&lt;View&gt;</code> tag??</strong></p>
+<p>A: The widget will automatically parse its siblings/children for <code>icon</code> properties with <code>fa-</code> prefix. For optimum efficiency, you should only apply the widget to these areas. </p>
+<p><strong>Q: Who made these Awesome Icons???</strong></p>
+<p>A: The Icons themselves were created by Dave Gandy, the Font in which they populate is under the SIL OFL 1.1 License.  It's free for commercial use!</p>
+<p><strong>Q: I've seen another FontAwesome on Titanium's Marketplace for $5, is this the same?</strong></p>
+<p>A: Not the same at all, the other one is using an older version of Font Awesome, has a few proprietary fonts mixed in, and was made for Titanium, not Alloy. </p></article>
+    </section>
+
+
+
+
+
+
+
+				</div>
+
+				<div class="clearfix"></div>
+				<footer>
+					
+					
+		<span class="jsdoc-message">
+		Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.0-alpha5</a>
+		on 2014-06-01T23:33:47-04:00 using the <a href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
+		</span>
+				</footer>
+			</div>
+
+			
+			<div class="span3">
+				<div id="toc"></div>
+			</div>
+			
+			<br clear="both">
+		</div>
+
+	</div>
+	<script src="scripts/sunlight.js"></script>
+	<script src="scripts/sunlight.xml.js"></script>
+	<script src="scripts/sunlight.javascript.js"></script>
+	<script src="scripts/sunlight-plugin.doclinks.js"></script>
+	<script src="scripts/sunlight-plugin.linenumbers.js"></script>
+	<script src="scripts/sunlight-plugin.menu.js"></script>
+	<script src="scripts/jquery.min.js"></script>
+	<script src="scripts/jquery.scrollTo.js"></script>
+	<script src="scripts/jquery.localScroll.js"></script>
+	<script src="scripts/bootstrap-dropdown.js"></script>
+	<script src="scripts/toc.js"></script>
+
+	<script>
+		$( function () {
+			$( "#toc" ).toc( {
+			    anchorName  : function(i, heading, prefix) {
+					return $(heading).attr("id") || ( prefix + i );
+				},
+				selectors   : "h1,h2,h3,h4",
+				showAndHide : false,
+				scrollTo    : 60
+			} );
+			$( "#toc>ul" ).addClass( "nav nav-pills nav-stacked" );
+			$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+			$(".tutorial-section pre" ).addClass("sunlight-highlight-javascript" ).addClass("linenums");
+			Sunlight.highlightAll({lineNumbers: false,  showMenu: true, enableDoclinks: true});
+		} );
+	</script>
+
+
+
+	
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+    "id": "com.mattmcfarland.fontawesome",
+    "name": "com.mattmcfarland.fontawesome",
+    "description" : "Font-Awesome(v4.1.0) for Titanium Alloy",
+    "author": "Dave Gandy, Matt McFarland",
+    "version": "1.1.1",
+    "copyright":"See fontawesome.io",
+    "license":"SIL OFL 1.1 http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL",
+    "min-alloy-version": "1.0",
+    "min-titanium-version":"3.0",
+    "tags":"tss,font,icon",
+    "platforms":"android,ios,mobileweb"
+}

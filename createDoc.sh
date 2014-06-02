@@ -1,0 +1,1 @@
+jsdoc * -r -t /usr/local/lib/node_modules/ink-docstrap/template -d doc
