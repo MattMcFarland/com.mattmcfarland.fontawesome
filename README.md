@@ -141,7 +141,7 @@ Created by Matt McFarland and Licensed under GPL
 
 ## Changelog
 
-**Version 1.3**
+**Version 1.3.0**
 * Update to FontAwesome 4.2.0
 
 **Version 1.2.0**
