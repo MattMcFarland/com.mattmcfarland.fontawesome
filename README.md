@@ -128,7 +128,7 @@ Additional methods such as add, remove, change are available for use with a widg
 
 ## License
 
-### Font Awesome 4.1.0
+### Font Awesome 4.2.0
 
 Created by Dave Gandy
 
@@ -140,6 +140,9 @@ Created by Matt McFarland and Licensed under GPL
 
 
 ## Changelog
+
+**Version 1.3.0**
+* Update to FontAwesome 4.2.0
 
 **Version 1.2.0**
 * Improved Documentation.
