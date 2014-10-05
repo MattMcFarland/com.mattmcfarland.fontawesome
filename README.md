@@ -2,7 +2,7 @@
 *OMG! It's the Offical Font Awesome 4.2.0 by Dave Gandy for Titanium Alloy!*
 
 ## Overview
-This is a widget for the [Appcelerator](http://www.appcelerator.com) [Alloy](http://projects.appcelerator.com/alloy/docs/Alloy-bootstrap/index.html) MVC framework which provides easy implementation of the Offical Font Awesome 4.1.0 icons found at [fontawesome.io](http://fontawesome.io)
+This is a widget for the [Appcelerator](http://www.appcelerator.com) [Alloy](http://projects.appcelerator.com/alloy/docs/Alloy-bootstrap/index.html) MVC framework which provides easy implementation of the Offical Font Awesome icons found at [fontawesome.io](http://fontawesome.io)
 
 ## Features
 * 100% Free to use and open source to boot
