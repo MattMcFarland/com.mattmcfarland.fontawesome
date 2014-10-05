@@ -1,5 +1,5 @@
-#Font Awesome Ti.Widget 1.2.0
-*OMG! It's the Offical Font Awesome 4.1.0 by Dave Gandy for Titanium Alloy!*
+#Font Awesome Ti.Widget 1.3.0
+*OMG! It's the Offical Font Awesome 4.2.0 by Dave Gandy for Titanium Alloy!*
 
 ## Overview
 This is a widget for the [Appcelerator](http://www.appcelerator.com) [Alloy](http://projects.appcelerator.com/alloy/docs/Alloy-bootstrap/index.html) MVC framework which provides easy implementation of the Offical Font Awesome 4.1.0 icons found at [fontawesome.io](http://fontawesome.io)
@@ -24,7 +24,7 @@ This is a widget for the [Appcelerator](http://www.appcelerator.com) [Alloy](htt
 
 ```javascript
 "dependencies": {
-	"com.mattmcfarland.fontawesome":"1.2.0"
+	"com.mattmcfarland.fontawesome":"1.3.0"
 }
 ```
 
@@ -134,7 +134,7 @@ Created by Dave Gandy
 
 FontAwesome.ttf is licensed under SIL OFL 1.1 
 
-### Titanium Alloy Widget 1.2.0 
+### Titanium Alloy Widget 1.3.0 
 
 Created by Matt McFarland and Licensed under GPL
 
