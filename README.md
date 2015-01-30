@@ -128,13 +128,13 @@ Additional methods such as add, remove, change are available for use with a widg
 
 ## License
 
-### Font Awesome 4.3.0
+### Font Awesome
 
 Created by Dave Gandy
 
 FontAwesome.ttf is licensed under SIL OFL 1.1 
 
-### Titanium Alloy Widget 1.3.0 
+### Titanium Alloy Widget
 
 Created by Matt McFarland and Licensed under GPL
 
