@@ -1,4 +1,4 @@
-#Font Awesome Ti.Widget 1.4.0
+#Font Awesome Ti.Widget 1.4.1
 *OMG! It's the Offical Font Awesome 4.3.0 by Dave Gandy for Titanium Alloy!*
 
 ## Overview
@@ -24,7 +24,7 @@ This is a widget for the [Appcelerator](http://www.appcelerator.com) [Alloy](htt
 
 ```javascript
 "dependencies": {
-	"com.mattmcfarland.fontawesome":"1.4.0"
+	"com.mattmcfarland.fontawesome":"1.4.1"
 }
 ```
 
@@ -140,6 +140,9 @@ Created by Matt McFarland and Licensed under GPL
 
 
 ## Changelog
+
+**Version 1.4.1**
+* Added support for "iconFontSize" property.
 
 **Version 1.4.0**
 * Update to FontAwesome 4.3.0
