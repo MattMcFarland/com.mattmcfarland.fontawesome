@@ -326,6 +326,10 @@ function addIcon(tag,iconChar) {
         if (tag['font']['fontSize']) {
             fSize = tag['font']['fontSize'];
         }
+        // If a "iconFontSize" property exists, use that instead
+        if (tag['font']['iconFontSize']) {
+            fSize = tag['font']['iconFontSize'];
+        }
     }
     
     // Configure new properties
