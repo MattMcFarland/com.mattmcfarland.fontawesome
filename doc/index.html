@@ -120,7 +120,8 @@
 <p>Using Titanium API with Javascript to add icons on the fly:</p>
 <pre><code class="lang-js">$.fa.add(MyLabel,'fa-star');
 </code></pre>
-<h2>Customization</h2><p>As of version 1.2.0, customization has been implemented.  You may use a different font-based icon character map with different widgets. For example, you could use <code>glyphicons</code> or different versions of <code>fontawesome</code></p>
+<h2>Customization</h2><p>If you want your icon to be a different size than your text, you can add a font.iconFontSize property to your object/class.</p><pre><code class="lang-js">{font:{iconFontSize:18,fontSize:12}}
+</code></pre><p>As of version 1.2.0, customization has been implemented.  You may use a different font-based icon character map with different widgets. For example, you could use <code>glyphicons</code> or different versions of <code>fontawesome</code></p>
 <h3>Enabling debugMode</h3><p>When customizing the Font Awesome Ti.Widget API, it is recommended to enable debugMode:</p>
 <pre><code class="lang-js">    $.fa.debugMode = true;
 </code></pre>
