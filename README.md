@@ -1,3 +1,5 @@
+[![MattMcFarland/com.mattmcfarland.fontawesome API Documentation](https://www.omniref.com/github/MattMcFarland/com.mattmcfarland.fontawesome.png)](https://www.omniref.com/github/MattMcFarland/com.mattmcfarland.fontawesome)
+
 #Font Awesome Ti.Widget 1.4.1
 *OMG! It's the Offical Font Awesome 4.3.0 by Dave Gandy for Titanium Alloy!*
 
