@@ -171,7 +171,7 @@ XML:
 
 TSS:
 
-```json
+```javascript
 ".search-icon": {
     text : "\uf002",
     font : {
