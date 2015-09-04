@@ -105,6 +105,7 @@ XML:
 
 ```xml
 <Label icon="fa-search" text="Search" id="searchLabel" />
+```
 
 TSS:
 
