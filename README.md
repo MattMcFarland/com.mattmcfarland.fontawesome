@@ -38,7 +38,7 @@ Before you submit an issue, be sure to check out the FAQ section.
 
 ```javascript
 "dependencies": {
-	"com.mattmcfarland.fontawesome":"1.5.0"
+    "com.mattmcfarland.fontawesome":"1.5.1"
 }
 ```
 
@@ -48,10 +48,10 @@ Before you submit an issue, be sure to check out the FAQ section.
 
 ```xml
 <Alloy>
-	<Window title="Tab 1">
-		<Label icon="fa-car">I am Window 1</Label>
-		<Widget id="fa" src="com.mattmcfarland.fontawesome"/>
-	</Window>
+    <Window title="Tab 1">
+        <Label icon="fa-car">I am Window 1</Label>
+        <Widget id="fa" src="com.mattmcfarland.fontawesome"/>
+    </Window>
 </Alloy>
 ```
 
@@ -64,8 +64,8 @@ That's it. You simply add your Icons in a very similar way we do it with HTML 5.
 ### Titanium
 
 ```js
-	var fa = Alloy.createWidget("com.mattmcfarland.fontawesome");
-	win.add(fa);
+    var fa = Alloy.createWidget("com.mattmcfarland.fontawesome");
+    win.add(fa);
 ```
 
 Using Titanium API with Javascript to add icons on the fly:
@@ -94,7 +94,7 @@ As of version 1.2.0, customization has been implemented.  You may use a differen
 
 When customizing the Font Awesome Ti.Widget API, it is recommended to enable debugMode:
 ```js
-	$.fa.debugMode = true;
+    $.fa.debugMode = true;
 ```
 
 ### Using "iconPosition" property
@@ -124,9 +124,9 @@ To add your very icon character map from a font-file:
 1. Copy your fontfile into your `assets/fonts` directory.
 
 2. Make sure the name of the font file and the system name of the font file match.
-	* For `IOS` - Titanium SDK looks for the system name of the font file
-	* For `ANDROID` and `MOBILE WEB` - Titanium SDK looks for the file name without the `ext` (.ttf)
-	* This is why FontAwesome.ttf is the same as FontAwesome, the system name is FontAwesome, file name is FontAwesome.
+    * For `IOS` - Titanium SDK looks for the system name of the font file
+    * For `ANDROID` and `MOBILE WEB` - Titanium SDK looks for the file name without the `ext` (.ttf)
+    * This is why FontAwesome.ttf is the same as FontAwesome, the system name is FontAwesome, file name is FontAwesome.
 
 > For more information, checkout the Titanium SDK documentation regarding adding fonts: http://docs.appcelerator.com/titanium/3.0/#!/guide/Custom_Fonts
 
@@ -139,7 +139,7 @@ To add your very icon character map from a font-file:
 5. Apply your custom fonts to a widget instance like so:
 
 ```js
-	$.fa.icons = require('new_icons');
+    $.fa.icons = require('new_icons');
 ```
 
 ### Extended Methods

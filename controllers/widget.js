@@ -304,12 +304,13 @@ function removeChars(string) {
  * @param {Ti.UI.View} tag - View elem to add to
  * @param {String} iconChar - Font Character String
  */
-function addIcon(tag,iconChar) {
+function addIcon(tag, iconChar) {
 
     // Set title/text caches to hold icon character.
-    var aText  = iconChar;
-    var aTitle = iconChar;
-    var fSize  = icons.defaultSize;
+    var aText    = iconChar;
+    var aTitle   = iconChar;
+    var fSize    = icons.defaultSize;
+    var position = 'prepend';
 
     // Debugging stuff
     if (debugMode) Ti.API.debug('['+counter+'] aText = "'+aText+'"');
@@ -327,18 +328,16 @@ function addIcon(tag,iconChar) {
         // If a "iconPosition" property exists and "append" is specified
         if (tag['font']['iconPosition']) {
             if (tag['font']['iconPosition'] == 'append') {
-                // We "append" the icon to the text if text and title properties exist
-                // by appending original text/title to new text/title that only has icon char.
-                if (tag['text']) aText   = tag['text']  + ' ' + aText;
-                if (tag['title']) aTitle = tag['title'] + ' ' + aTitle;
-            }
-            else {
-                // Otherwise we "prepend" the icon if text and title properties exist
-                // by prepending original text/title to new text/title that only has icon char.
-                if (tag['text']) aText   += ' ' + tag['text'];
-                if (tag['title']) aTitle += ' ' + tag['title'];
+                position = tag['font']['iconPosition'];
             }
         }
+    }
+
+    if (position == 'append') {
+        // We "append" the icon to the text if text and title properties exist
+        // by appending original text/title to new text/title that only has icon char.
+        if (tag['text']) aText   = tag['text']  + ' ' + aText;
+        if (tag['title']) aTitle = tag['title'] + ' ' + aTitle;
     }
     else {
         // By default we always "prepend" the icon if text and title properties exist
