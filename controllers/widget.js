@@ -307,19 +307,13 @@ function removeChars(string) {
 function addIcon(tag,iconChar) {
 
     // Set title/text caches to hold icon character.
-    var aText = iconChar;
+    var aText  = iconChar;
     var aTitle = iconChar;
-    var fSize = icons.defaultSize;
-
-    // Preserve existing text and title properties, if they exist.
-    // by appending original text/title to new text/title that only has icon char.
-    if (tag['text']) aText += ' ' + tag['text'];
-    if (tag['title']) aTitle += ' ' + tag['title'];
+    var fSize  = icons.defaultSize;
 
     // Debugging stuff
     if (debugMode) Ti.API.debug('['+counter+'] aText = "'+aText+'"');
     if (debugMode) Ti.API.debug('['+counter+'] aTitle = "'+aTitle+'"');
-
 
     // Preserve existing font size, if it is configured.
     if (tag['font']) {
@@ -330,6 +324,27 @@ function addIcon(tag,iconChar) {
         if (tag['font']['iconFontSize']) {
             fSize = tag['font']['iconFontSize'];
         }
+        // If a "iconPosition" property exists and "append" is specified
+        if (tag['font']['iconPosition']) {
+            if (tag['font']['iconPosition'] == 'append') {
+                // We "append" the icon to the text if text and title properties exist
+                // by appending original text/title to new text/title that only has icon char.
+                if (tag['text']) aText   = tag['text']  + ' ' + aText;
+                if (tag['title']) aTitle = tag['title'] + ' ' + aTitle;
+            }
+            else {
+                // Otherwise we "prepend" the icon if text and title properties exist
+                // by prepending original text/title to new text/title that only has icon char.
+                if (tag['text']) aText   += ' ' + tag['text'];
+                if (tag['title']) aTitle += ' ' + tag['title'];
+            }
+        }
+    }
+    else {
+        // By default we always "prepend" the icon if text and title properties exist
+        // by prepending original text/title to new text/title that only has icon char.
+        if (tag['text']) aText   += ' ' + tag['text'];
+        if (tag['title']) aTitle += ' ' + tag['title'];
     }
 
     // Configure new properties

@@ -97,13 +97,32 @@ When customizing the Font Awesome Ti.Widget API, it is recommended to enable deb
 	$.fa.debugMode = true;
 ```
 
+### Using "iconPosition" property
+
+By default we "prepend" any text/title value with the icon but you might want to "append" the icon instead.
+
+XML:
+
+```xml
+<Label icon="fa-search" text="Search" id="searchLabel" />
+
+TSS:
+
+```javascript
+"#searchLabel": {
+    font : {
+        iconPosition : "append", // Default value is "prepend"
+    }
+}
+```
+
 ### Using custom icons
 
 To add your very icon character map from a font-file:
 
 1. Copy your fontfile into your `assets/fonts` directory.
 
-2. Make sure the name of the font file and the system name of the font file match.  
+2. Make sure the name of the font file and the system name of the font file match.
 	* For `IOS` - Titanium SDK looks for the system name of the font file
 	* For `ANDROID` and `MOBILE WEB` - Titanium SDK looks for the file name without the `ext` (.ttf)
 	* This is why FontAwesome.ttf is the same as FontAwesome, the system name is FontAwesome, file name is FontAwesome.
@@ -133,7 +152,7 @@ Once you add an instance of the widget to a view, you may use the API methods to
 
 The widget was designed so at a very basic level it works right out of the box.  Meaning, all you have to do is add a proper `icon` property to any view and it works.  But not in all cases, so the purpose of this section is to explain how it works so you can have a better understanding and control over the widget and how it operates.
 
-Once you create a `Font Awesome Ti.Widget` it immediately parses the view it is added to for other `Ti.UI.View` objects.  The scope of this query is limited to the widget's siblings and it/their children views (and grand children and so on). 
+Once you create a `Font Awesome Ti.Widget` it immediately parses the view it is added to for other `Ti.UI.View` objects.  The scope of this query is limited to the widget's siblings and it/their children views (and grand children and so on).
 > As of version 1.2.0, you can disable the initial parser by adding the property `instaParse` to `false` (`eg: <Widget instaParse = "false" ...`), then use the `refresh` method to parse when you are ready.
 
 The `Font Awesome Ti.Widget` then applies icons to every instance of a `Ti.UI.View` object that has an `icon` property with a `fa-` prefix.  Because MobileWeb, Android, and IOS handle View objects (such as Label, Button, Row, etc) differently, you may have to create blank labels just for icons for optimal compatibility.
@@ -148,15 +167,15 @@ A: If you add it to a Label with text, it appears before the text.  If you want 
 
 **Q: Where is the reference guide/cheat sheet for these icons?**
 
-A: You can find a complete list of all icons and their names at [fontawesome.io/icons](http://fontawesome.io/icons) 
+A: You can find a complete list of all icons and their names at [fontawesome.io/icons](http://fontawesome.io/icons)
 
 **Q: Are there any compatibility issues?**
 
-A: Android requires putting the icon inside the app's asset folder, and Mobileweb does not allow for text+icon sharing. 
+A: Android requires putting the icon inside the app's asset folder, and Mobileweb does not allow for text+icon sharing.
 
 **Q: Why can't I see icons in my Listview/Tableview?**
 
-A: Currently, this widget does not work well with auto-generated content, such as **Listview**, **TableView** and alike. 
+A: Currently, this widget does not work well with auto-generated content, such as **Listview**, **TableView** and alike.
 While setting the icon property does not work, the combination of setting the text property to the unicode character and the fontFamily to ``FontAwesome`` does work:
 
 XML:
@@ -190,7 +209,7 @@ A: Please use the issues tab on the right, this way we can publically fix your i
 
 **Q: Do I need to put it inside every `<View>` tag??**
 
-A: The widget will automatically parse its siblings/children for `icon` properties with `fa-` prefix. For optimum efficiency, you should only apply the widget to these areas. 
+A: The widget will automatically parse its siblings/children for `icon` properties with `fa-` prefix. For optimum efficiency, you should only apply the widget to these areas.
 
 **Q: Who made these Awesome Icons???**
 
@@ -198,7 +217,7 @@ A: The Icons themselves were created by Dave Gandy, the Font in which they popul
 
 **Q: I've seen another FontAwesome on Titanium's Marketplace for $5, is this the same?**
 
-A: Not the same at all, the other one is using an older version of Font Awesome, has a few proprietary fonts mixed in, and was made for Titanium, not Alloy. 
+A: Not the same at all, the other one is using an older version of Font Awesome, has a few proprietary fonts mixed in, and was made for Titanium, not Alloy.
 
 ## License
 
@@ -213,6 +232,10 @@ FontAwesome.ttf is licensed under SIL OFL 1.1
 Created by Matt McFarland and Licensed under GPL
 
 ## Changelog
+
+**Version 1.5.1**
+* Added support for "iconPosition" property.
+* Added support inside "leftNavButtons" and "rightNavButtons"
 
 **Version 1.5.0**
 * Update to FontAwesome 4.4.0
@@ -234,12 +257,12 @@ Created by Matt McFarland and Licensed under GPL
 * Mobileweb is no longer supported, but still works.
 
 **Version 1.1.1**
-* Fix md documentation 
+* Fix md documentation
 
 **Version 1.1.0**
 * Added JS methods for adding/removing/refreshing icons.
 
-**Version 1.0.1-3** 
+**Version 1.0.1-3**
 * Established symantic versioning, fixed android bugs.
 * Disregard version 4.0.3 (is actually version 1.0) - important!
 
