@@ -1,7 +1,7 @@
 [![MattMcFarland/com.mattmcfarland.fontawesome API Documentation](https://www.omniref.com/github/MattMcFarland/com.mattmcfarland.fontawesome.png)](https://www.omniref.com/github/MattMcFarland/com.mattmcfarland.fontawesome)
 
-# Font Awesome Ti.Widget 1.5.1
-*OMG! It's the Offical Font Awesome 4.4.0 by Dave Gandy for Titanium Alloy!*
+# Font Awesome Ti.Widget 1.6.0
+*OMG! It's the Offical Font Awesome 4.5.0 by Dave Gandy for Titanium Alloy!*
 
 This is a widget for the [Appcelerator](http://www.appcelerator.com) [Alloy](http://projects.appcelerator.com/alloy/docs/Alloy-bootstrap/index.html) MVC framework which provides easy implementation of the Offical Font Awesome icons found at [fontawesome.io](http://fontawesome.io).
 
@@ -38,7 +38,7 @@ Before you submit an issue, be sure to check out the FAQ section.
 
 ```javascript
 "dependencies": {
-    "com.mattmcfarland.fontawesome":"1.5.1"
+    "com.mattmcfarland.fontawesome":"1.6.0"
 }
 ```
 
@@ -233,6 +233,9 @@ FontAwesome.ttf is licensed under SIL OFL 1.1
 Created by Matt McFarland and Licensed under GPL
 
 ## Changelog
+
+**Version 1.6.0**
+* Update to FontAwesome 4.5.0
 
 **Version 1.5.1**
 * Added support for "iconPosition" property.
