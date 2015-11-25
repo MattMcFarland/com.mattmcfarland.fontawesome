@@ -235,8 +235,7 @@ Created by Matt McFarland and Licensed under GPL
 ## Changelog
 
 **Version 1.6.0**
-* Added support for "iconPosition" property.
-* Added support inside "leftNavButtons" and "rightNavButtons"
+* Update to FontAwesome 4.5.0
 
 **Version 1.5.1**
 * Added support for "iconPosition" property.
