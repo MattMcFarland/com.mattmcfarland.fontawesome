@@ -279,7 +279,7 @@ function applyIcons() {
 function removeIcon(tag) {
 	if (tag.icon) tag.icon = '';
 	if (tag.text) tag.text = removeChars(tag.text);
-	if (tag.title) tag.text = removeChars(tag.title);
+	if (tag.title) tag.title = removeChars(tag.title);
 }
 
 /**
