@@ -21,10 +21,10 @@ Before you submit an issue, be sure to check out the FAQ section.
 ## Features
 * 100% Free to use and open source to boot
 * Simply drop the widget into your view XML file
-* Add Icons to any Label, View, or Button with a simple xml attribute.
-* Vector Icons from a font file, scale to any size, give it any color.
+* Add Icons to any Label, View, or Button with a simple xml attribute
+* Vector Icons from a font file, scale to any size, give it any color
 * Works on Android, iOS
-* Compatibile with other fonts and icon sets.
+* Compatibile with other fonts and icon sets
 
 ## Working Example
 ![Imgur](http://i.imgur.com/xuUFdQE.png)
